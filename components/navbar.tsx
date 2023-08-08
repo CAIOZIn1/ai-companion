@@ -8,6 +8,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
+import { MobileSidebar } from "@/components/mobilesidebar";
 
 const font = Poppins({
   weight: "600",
@@ -29,9 +30,10 @@ export const Navbar = () => {
           border-b
           border-primary/10
           bg-secondary
+          h-16
         ">
       <div className="flex items-center">
-        <Menu className="block md:hidden" />
+        <MobileSidebar />
         <Link href="/">
           <h1 className={cn(
             "hidden md:block text-xl md:text-3xl font-bold text-primary",
